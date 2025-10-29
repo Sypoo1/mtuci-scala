@@ -1,0 +1,39 @@
+*.class
+*.log
+
+# scala-cli, bloop, metals
+.bsp/
+.bloop/
+.metals/
+.scala-build/
+project/metals.sbt
+
+# scala 3
+.tasty
+
+# sbt specific
+project/project/
+project/target/
+.cache
+.history
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
+.history
+.cache-main
+
+# ENSIME specific
+.ensime_cache/
+.ensime
+
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
