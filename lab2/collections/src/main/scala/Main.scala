@@ -48,5 +48,52 @@ object CollectionsLab {
 
     println(applyToAll(List(1, 2, 3), _ * 10))
     println(applyTwice(List(-1, -2, -3), _.abs, sqrt(_)))
+
+
+    println("\ntask 4:\n")
+
+    def normalMultiplyAndDouble(a: Int, b: Int): Int = 2 * a * b
+
+    def curriedMultiplyAndDouble(a: Int)(b: Int): Int = 2 * a * b
+
+    val normalResult = normalMultiplyAndDouble(5, 7)
+
+    val myltiplyByTen = curriedMultiplyAndDouble(5)
+    val curiedResult = myltiplyByTen(7)
+
+    val directCurriedCall = curriedMultiplyAndDouble(5)(7)
+
+    println(normalResult)
+
+    println(curiedResult)
+
+    println(directCurriedCall)
+
+    println("\ntask 5:\n")
+
+    val immutableNumbers = List(1, 2, 3)
+    val newImmutableNumbers = immutableNumbers :+ 4
+
+    println(immutableNumbers)
+    println(newImmutableNumbers)
+
+    import scala.collection.mutable.ListBuffer
+
+    val buf = ListBuffer(1, 2, 3)
+    buf += 4
+
+    println(buf)
+
+    val immutableMap = Map("a" -> 1)
+    val newImmutableMap = immutableMap + ("b" -> 2)
+
+    println(immutableMap)
+    println(newImmutableMap)
+
+    import scala.collection.mutable
+    val mutableMap = mutable.Map("a" -> 1)
+    mutableMap("b") = 2
+
+    println(mutableMap)
   }
 }
