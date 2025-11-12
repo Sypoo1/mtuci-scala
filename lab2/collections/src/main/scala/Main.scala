@@ -47,6 +47,6 @@ object CollectionsLab {
     }
 
     println(applyToAll(List(1, 2, 3), _ * 10))
-    -2, -3), _.abs, sqrt(_)))
+    println(applyTwice(List(-1, -2, -3), _.abs, sqrt(_)))
   }
 }
