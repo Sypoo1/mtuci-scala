@@ -8,12 +8,11 @@ object AsyncLab {
 
     println("\ntask 1:\n")
 
-    println("Start async computation")
-
     val futureResult = Future {
-      val result = (1L to 1_000_000L).sum
-      println("Async computations completed")
-      result
+      println("Start async computation")
+      Thread.sleep(2000)
+      println("Async computation completed")
+      42
     }
 
     futureResult.onComplete {
@@ -22,7 +21,7 @@ object AsyncLab {
     }
 
     println("Waiting for result")
-    Await.result(futureResult, 5.seconds)
+    Await.result(futureResult, 3.seconds)
     println("task 1 is done")
   }
 }
